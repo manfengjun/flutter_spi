@@ -1,14 +1,53 @@
-# flutter_spi
+# Toast
 
-A new Flutter package project.
+A Dio NetWork plugin
 
-## Getting Started
+## How to Use
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+```yaml
+# add this line to your dependencies
+flutter_spi : ^0.1.0
+```
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+```dart
+import 'package:flutter_spi/flutter_spi.dart';
+```
+
+```dart
+PGSpi(AccountAPI.login(
+            {
+                "type": "top", 
+                "key": "8093f06289133b469be6ff7ab6af1aa9"
+            }
+        )
+    )
+    .mapSpiObjects<News>(path: "data")
+    .listen(
+        (value) => print(value[0].authorName),
+        onError: (e) {
+            print((e.error as PGSpiError).message);
+      },
+    );
+```
+
+export 'src/pg_spi.dart';
+export 'src/pg_spi_error.dart';
+export 'src/pg_spi_logger.dart';
+export 'src/pg_spi_manager.dart';
+export 'src/pg_spi_response.dart';
+export 'src/pg_spi_target.dart';
+
+
+class | description
+--------|------------
+pg_spi | Spi
+pg_spi_error | Error
+pg_spi_logger| Logger
+pg_spi_manager | NetWork Manage
+pg_spi_response | Response Convert
+pg_spi_target | Api Enum
+
+## License
+
+    MIT License
+

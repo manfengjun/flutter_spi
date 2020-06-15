@@ -1,6 +1,6 @@
 name: flutter_spi
-description: A new Flutter package project.
-version: 0.0.1
+description: Flutter Widgets that make it easy to use the dio package. contain the Logger Plugin、Error Plugin、Serialize Plugin、Path Plugin.
+version: 0.0.2
 homepage: https://github.com/manfengjun/flutter_spi
 
 environment:
