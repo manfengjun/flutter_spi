@@ -1,3 +1,10 @@
-## [0.0.1] - TODO: Add release date.
+## [0.0.2] 
+    * Update Package Documents
 
-* TODO: Describe initial release.
+## [0.0.1] 
+    * Logger Plugin
+    * Error Plugin
+    * Serialize Plugin 
+    * Dio Manager.
+
+
