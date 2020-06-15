@@ -1,6 +1,7 @@
 name: flutter_spi
 description: Flutter Widgets that make it easy to use the dio package. contain the Logger Plugin、Error Plugin、Serialize Plugin、Dio Manager.
 version: 0.1.0
+authors: - fengjun <chinafengjun@gmail.com>
 homepage: https://github.com/manfengjun/flutter_spi
 
 environment:
