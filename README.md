@@ -6,7 +6,7 @@ A Dio NetWork plugin
 
 ```yaml
 # add this line to your dependencies
-flutter_spi : ^0.1.0
+flutter_spi : ^0.0.2
 ```
 
 ```dart
