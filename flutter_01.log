@@ -1,0 +1,93 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter pub get
+
+## exception
+
+YamlException: Error on line 4, column 9: Block sequence entries are not allowed here.
+  ╷
+4 │ author: - chinafengjun@gmail.com
+  │         ^
+  ╵
+
+```
+#0      Scanner._fetchBlockEntry (package:yaml/src/scanner.dart:657:9)
+#1      Scanner._fetchNextToken (package:yaml/src/scanner.dart:429:11)
+#2      Scanner._fetchMoreTokens (package:yaml/src/scanner.dart:339:7)
+#3      Scanner.peek (package:yaml/src/scanner.dart:317:27)
+#4      Scanner.advance (package:yaml/src/scanner.dart:311:12)
+#5      Parser._parseBlockMappingValue (package:yaml/src/parser.dart:464:22)
+#6      Parser._stateMachine (package:yaml/src/parser.dart:88:16)
+#7      Parser.parse (package:yaml/src/parser.dart:47:19)
+#8      Loader._loadMapping (package:yaml/src/loader.dart:163:37)
+#9      Loader._loadNode (package:yaml/src/loader.dart:86:16)
+#10     Loader._loadDocument (package:yaml/src/loader.dart:62:20)
+#11     Loader.load (package:yaml/src/loader.dart:54:20)
+#12     loadYamlDocument (package:yaml/yaml.dart:51:25)
+#13     loadYamlNode (package:yaml/yaml.dart:42:5)
+#14     loadYaml (package:yaml/yaml.dart:34:5)
+#15     _pluginFromPackage (package:flutter_tools/src/plugins.dart:282:27)
+#16     findPlugins.<anonymous closure> (package:flutter_tools/src/plugins.dart:316:27)
+#17     _LinkedHashMapMixin.forEach (dart:collection-patch/compact_hash.dart:379:8)
+#18     findPlugins (package:flutter_tools/src/plugins.dart:314:12)
+#19     refreshPluginsList (package:flutter_tools/src/plugins.dart:1050:32)
+#20     FlutterProject.ensureReadyForPlatformSpecificTooling (package:flutter_tools/src/project.dart:210:5)
+#21     PackagesGetCommand.runCommand (package:flutter_tools/src/commands/packages.dart:134:28)
+<asynchronous suspension>
+#22     FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:723:18)
+#23     _rootRunUnary (dart:async/zone.dart:1192:38)
+#24     _CustomZone.runUnary (dart:async/zone.dart:1085:19)
+#25     _FutureListener.handleValue (dart:async/future_impl.dart:141:18)
+#26     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:682:45)
+#27     Future._propagateToListeners (dart:async/future_impl.dart:711:32)
+#28     Future._completeWithValue (dart:async/future_impl.dart:526:5)
+#29     Future._asyncComplete.<anonymous closure> (dart:async/future_impl.dart:556:7)
+#30     _rootRun (dart:async/zone.dart:1184:13)
+#31     _CustomZone.run (dart:async/zone.dart:1077:19)
+#32     _CustomZone.runGuarded (dart:async/zone.dart:979:7)
+#33     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1019:23)
+#34     _microtaskLoop (dart:async/schedule_microtask.dart:43:21)
+#35     _startMicrotaskLoop (dart:async/schedule_microtask.dart:52:5)
+#36     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
+#37     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:169:5)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, v1.17.3, on Mac OS X 10.15.6 19G36e, locale zh-Hans-CN)
+    • Flutter version 1.17.3 at /Users/jun/flutter
+    • Framework revision b041144f83 (11 days ago), 2020-06-04 09:26:11 -0700
+    • Engine revision ee76268252
+    • Dart version 2.8.4
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 29.0.2)
+    • Android SDK at /Users/jun/Library/Android/sdk
+    • Platform android-29, build-tools 29.0.2
+    • ANDROID_HOME = /Users/jun/Library/Android/sdk
+    • Java binary at: /Applications/Android Studio.app/Contents/jre/jdk/Contents/Home/bin/java
+    • Java version OpenJDK Runtime Environment (build 1.8.0_202-release-1483-b49-5587405)
+    • All Android licenses accepted.
+
+[✓] Xcode - develop for iOS and macOS (Xcode 11.5)
+    • Xcode at /Applications/Xcode.app/Contents/Developer
+    • Xcode 11.5, Build version 11E608c
+    • CocoaPods version 1.9.1
+
+[✓] Android Studio (version 3.5)
+    • Android Studio at /Applications/Android Studio.app/Contents
+    • Flutter plugin version 42.1.1
+    • Dart plugin version 191.8593
+    • Java version OpenJDK Runtime Environment (build 1.8.0_202-release-1483-b49-5587405)
+
+[✓] VS Code (version 1.45.1)
+    • VS Code at /Applications/Visual Studio Code.app/Contents
+    • Flutter extension version 3.11.0
+
+[✓] Connected device (1 available)
+    • iPhone 11 Pro Max • EE2AC624-597D-4DC0-BA73-BF78303ADB39 • ios • com.apple.CoreSimulator.SimRuntime.iOS-13-5 (simulator)
+
+• No issues found!
+```
