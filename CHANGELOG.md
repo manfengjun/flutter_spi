@@ -1,3 +1,5 @@
+## [0.1.0] 
+    * Official Version
 ## [0.0.2] 
     * Update Package Documents
 

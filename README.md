@@ -1,4 +1,4 @@
-# Toast
+# Flutter Spi
 
 A Dio NetWork plugin
 
@@ -6,7 +6,7 @@ A Dio NetWork plugin
 
 ```yaml
 # add this line to your dependencies
-flutter_spi : ^0.0.2
+flutter_spi : ^0.1.0
 ```
 
 ```dart
@@ -41,5 +41,5 @@ pg_spi_target | Api Enum
 
 ## License
 
-    MIT License
+MIT License
 
