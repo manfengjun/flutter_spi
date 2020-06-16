@@ -61,7 +61,6 @@ extension PGSpiEx on PGSpi {
       );
       return response;
     } on DioError catch (e) {
-      print('错误信息：' + (e.error as PGSpiError).message);
       throw e;
     }
   }
@@ -83,7 +82,6 @@ extension PGSpiEx on PGSpi {
           )
           .toList();
     } on DioError catch (e) {
-      print('错误信息：' + (e.error as PGSpiError).message);
       throw e;
     }
   }

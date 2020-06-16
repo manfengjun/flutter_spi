@@ -10,8 +10,8 @@ extension PGSpiRx on PGSpi {
       .asStream()
       .map((value) => BaseBeanEntity.fromJson(value).object<T>());
   // objects stream
-  Stream<List<T>> mapSpiObjects<T>({String path}) =>
-      this.responseSpiJsons(path: path).asStream().map(
-            (value) => BaseBeanEntity.fromJsonList(value).objects<T>(),
-          );
+  Stream<List<T>> mapSpiObjects<T>({String path}) => this
+      .responseSpiJsons(path: path)
+      .asStream()
+      .map((value) => BaseBeanEntity.fromJsonList(value).objects<T>());
 }

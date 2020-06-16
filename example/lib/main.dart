@@ -14,12 +14,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // 设置解析Key和成功状态
-    PGSpiManager.shared.key = ResponseKey(
-      data: 'result',
-      status: 'error_code',
-      msg: 'reason',
-      success: 0,
-    );
+    // PGSpiManager.shared.key = ResponseKey(
+    //   data: 'result',
+    //   status: 'error_code',
+    //   msg: 'reason',
+    //   success: 0,
+    // );
     // 请求示例
     PGSpi(AccountAPI.login(
             {"type": "top", "key": "8093f06289133b469be6ff7ab6af1aa9"}))
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
       (value) => print(value[0].authorName),
       onError: (e) {
         //获取失败
-        print((e.error as PGSpiError).message);
+        print('错误：' + (e.error as PGSpiError).message);
       },
     );
 

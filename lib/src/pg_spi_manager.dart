@@ -27,9 +27,14 @@ class PGSpiConfig {
 }
 
 class ResponseKey {
-  String data = 'data';
-  String msg = 'msg';
-  String status = 'status';
-  int success = 1;
-  ResponseKey({this.data, this.msg, this.status, this.success});
+  String data;
+  String msg;
+  String status;
+  int success;
+  ResponseKey({
+    this.data = 'data',
+    this.msg = 'msg',
+    this.status = 'status',
+    this.success = 1,
+  });
 }

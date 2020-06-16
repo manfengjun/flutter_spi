@@ -32,12 +32,12 @@ class PGSpiError extends Error {
   int status;
   String message = '请求失败';
 
-  PGSpiError(this.status, {this.message});
+  PGSpiError._init(this.status, {this.message});
   factory PGSpiError.exception(Exception exception,
       {int status, String message}) {
     int code = status != null ? status : exception.value;
     String msg = message != null ? message : spiCode[exception.value].msg;
-    return PGSpiError(code, message: msg);
+    return PGSpiError._init(code, message: msg);
   }
 }
 
